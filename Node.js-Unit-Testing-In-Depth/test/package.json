@@ -1,0 +1,11 @@
+{
+  "name": "node.js-unit-testing-in-depth",
+  "version": "1.0.0",
+  "description": "these code is written by Jakhongir for learning Nodejs Unit Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jakhongir Bakhodirov",
+  "license": "ISC"
+}
