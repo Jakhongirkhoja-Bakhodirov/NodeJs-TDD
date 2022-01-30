@@ -8,3 +8,10 @@ exports.addCallback = (a,b,callback) => {
     },500);
 };
 
+exports.addPromise = (a,b) => {
+    if(b===0) {
+        return Promise.reject(new Error('Dividing to the zero'));
+    }
+    return Promise.reject(new Error('Dividing to the zero'));
+    return Promise.resolve(a+b);
+}
