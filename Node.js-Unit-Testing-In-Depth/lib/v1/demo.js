@@ -9,9 +9,9 @@ exports.addCallback = (a,b,callback) => {
 };
 
 exports.addPromise = (a,b) => {
-    if(b===0) {
-        return Promise.reject(new Error('Dividing to the zero'));
-    }
-    return Promise.reject(new Error('Dividing to the zero'));
+    // if(b === 0) {
+    //     console.log(b);
+    //     return Promise.reject(new Error('Dividing to the zero'));
+    // }
     return Promise.resolve(a+b);
 }

@@ -1,5 +1,8 @@
 const chai = require('chai');
 const expect = chai.expect;
+const chaiAsPromised = require('chai-as-promised');
+
+chai.use(chaiAsPromised);
 
 const demo = require('./demo');
 
@@ -21,20 +24,31 @@ describe('demo' , () => {
     });
 
     context('test promise' , () => {
-        // it('should add with a promise callback' , (done) => {
-        //     demo.addPromise(1,0).then(result => {
-        //        expect(result).to.equal(3);
-        //        done();
-        //     }).catch((er) => {
-        //         console.log('Catch error');
-        //         done(er);
-        //     }); 
-        // });
+        it('should add with a promise callback' , (done) => {
+            demo.addPromise(1,2).then(result => {
+               expect(result).to.equal(3);
+               done();
+            }).catch((er) => {
+                console.log('Catch error');
+                done(er);
+            }); 
+        });
+
         it('test promise again' , () => {
             //if you do not use catch block to catch any error , any errors will be passed without throwing errors
             demo.addPromise(1,2).then(result => {
                 expect(result).to.equal(3);
             });
+        });
+
+        //using async await to test promise
+        it('should test promise with async await' , async() => {
+            let result = await demo.addPromise(4,4);
+            expect(result).to.equal(8);
+        });
+
+        it('should test promise with chai as promised' , async() => {
+            await expect(demo.addPromise(1,2)).to.eventually.equal(3);
         });
     });
 });
