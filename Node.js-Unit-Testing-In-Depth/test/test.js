@@ -29,4 +29,11 @@ describe('file to be tested' , () => {
 
         it('this is a pending test');
     });
+
+
+    context('another function' , () => {
+        it('should to something with another function' , () => {
+
+        });
+    });
 });
