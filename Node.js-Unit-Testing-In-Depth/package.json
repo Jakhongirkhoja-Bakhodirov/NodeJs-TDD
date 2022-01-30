@@ -4,7 +4,7 @@
   "description": "these code is written by Jakhongir for learning Nodejs Unit Testing",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./lib/**/*.test.js"
   },
   "author": "Jakhongir Bakhodirov",
   "license": "ISC",
